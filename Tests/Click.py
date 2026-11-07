@@ -1,5 +1,6 @@
 from playwright.sync_api import Page, expect
 
+# Verify that clicking the button updates its styling to indicate success.
 def test_click(page: Page):
     # Open the UI Testing Playground homepage.
     page.goto("http://www.uitestingplayground.com/click")
@@ -13,6 +14,5 @@ def test_click(page: Page):
     # Click the button.
     btn.click()
 
-
-    # Confirm the button is visible and that the browser reached the expected URL.
+    # Confirm the click changed the button to its success class.
     expect(btn).to_have_class("btn btn-success")

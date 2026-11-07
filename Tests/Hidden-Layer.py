@@ -1,5 +1,6 @@
 from playwright.sync_api import Page, expect
 
+# Verify that the green button on the Hidden Layers page is visible and clickable.
 def test_hidd_layer(page: Page):
     # Open the Hidden Layer page from the UI Testing Playground.
     page.goto("http://www.uitestingplayground.com/hiddenlayers")

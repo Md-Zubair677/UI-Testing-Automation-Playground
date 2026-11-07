@@ -1,7 +1,9 @@
 from playwright.sync_api import Page, expect
 
+# Verify that client-side processing eventually displays its completion message.
 def test_client_side_delay(page: Page):
 
+    # Open the page that runs delayed client-side logic.
     page.goto("http://www.uitestingplayground.com/clientdelay")
 
     # Locate the button
